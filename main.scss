@@ -466,10 +466,6 @@ main {
         }
 
 
-
-
-
-
         &-img {
             width: auto;
             height: 400px;
@@ -516,11 +512,11 @@ main {
                     line-height: 180%;
 
 
-
                     @media screen and (max-width:425px) {
                         font-size: 20px;
                         line-height: 120%;
                         width: 400px;
+                        text-align: justify;
                     }
 
                     @media screen and (426px <=width<=1024px) {
@@ -528,6 +524,7 @@ main {
                         font-size: 20px;
                         line-height: 140%;
                         text-align: justify;
+
                     }
                 }
             }
