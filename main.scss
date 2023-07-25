@@ -404,7 +404,7 @@ main {
         @media screen and (426px <=width<=1024px) {
             gap: 5px;
             font-size: 15px;
-            flex-direction: c;
+            flex-direction: column;
         }
 
     }
@@ -421,6 +421,21 @@ main {
     width: 100%;
     height: 100%;
     padding: 0px;
+
+     @media screen and (max-width:425px) {
+           border-bottom: 3px solid #000;
+           padding-bottom: 40px; 
+        }
+
+     @media screen and (426px <=width<=1024px) {
+        border-bottom: 3px solid #000;
+        padding-bottom: 40px;
+
+        }
+
+
+        
+
 }
 
 .submain {
@@ -446,11 +461,28 @@ main {
         padding-bottom: 50px;
         padding-top: 50px;
 
+        @media screen and (max-width:425px) {
+           flex-direction: column;
+           padding-bottom: 30px;
+           overflow: hidden; 
+        }
+
+        
+
+        
+
+
         &-img {
             width: auto;
             height: 400px;
             margin-right: 45px;
+
+            @media screen and (max-width:425px) {
+                margin-bottom: 20px; 
+                margin-right: 0px;
+             }
         }
+        
 
         &-detail {
             display: flex;
@@ -461,6 +493,15 @@ main {
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 110px;
+
+                @media screen and (max-width:425px) {
+                    margin-bottom: 0px; 
+                 }
+
+                 @media screen and (426px <=width<=1024px) {
+                    margin-bottom:80px;
+                    width: 460px;
+                    }
 
                 &-header {
                     font-size: 40px;
@@ -475,6 +516,21 @@ main {
                     font-style: normal;
                     font-weight: 400;
                     line-height: 180%;
+                    
+
+
+                    @media screen and (max-width:425px) {
+                      font-size: 20px;
+                      line-height: 120%;
+                      width: 400px;
+                    }
+
+                    @media screen and (426px <=width<=1024px) {
+                    flex-direction: column;
+                    font-size: 20px;
+                    line-height: 140%;
+                    text-align: justify;
+                    }
                 }
             }
         }
@@ -494,6 +550,15 @@ main {
     font-family: $mainfont;
     margin-top: 50px;
     gap: 48px;
+
+    
+     @media screen and (max-width:425px) {
+        display: none;
+     }
+
+    @media screen and (426px <=width<=1024px) {
+        display: none;
+    }
 
     &-top {
         display: flex;
@@ -681,6 +746,14 @@ h4 {
         line-height: normal;
         background-color: white;
         border-width: 0px;
+
+        @media screen and (max-width:425px) {
+            background-color:rgb(189, 0, 132);
+        }
+
+        @media screen and (426px <=width<=1024px) {
+            background-color:rgb(255, 251, 0);
+        }
     }
 }
 
@@ -691,6 +764,14 @@ h4 {
     display: flex;
     flex-direction: column;
     margin: 50px 0px;
+
+    @media screen and (max-width:425px) {
+        display: none;
+     }
+
+    @media screen and (426px <=width<=1024px) {
+        display: none;
+    }
 
     &-main {
         font-family: $mainfont;
@@ -757,13 +838,22 @@ h4 {
     margin-top: 100px;
     justify-content: space-between;
 
+    @media screen and (max-width:425px) {
+        display: none;
+     }
+
+    
     &-title {
         font-size: 150px;
         font-style: normal;
         font-weight: 600;
         text-transform: uppercase;
         margin: 50px 0px 50px;
-        width: auto
+        width: auto;
+
+        @media screen and (426px <=width<=1024px) {
+            font-size: 100px; 
+        }
     }
 }
 
@@ -772,14 +862,20 @@ h4 {
     flex-direction: row;
     justify-content: center;
     margin-bottom: 200px;
-    ;
+    
+    @media screen and (max-width:425px) {
+        display: none;
+     }
 
+     @media screen and (426px <=width<=1024px) {
+        flex-direction: column;     
+     }
 
 
     &-part {
         display: flex;
         flex-direction: column;
-
+       
 
 
         &-detail {
@@ -789,6 +885,10 @@ h4 {
             padding: 50px 250px;
             border: 1px solid #000;
             gap: 50px;
+
+            @media screen and (426px <=width<=1024px) {
+                padding: 50px 100px;    
+             }
 
             &-img {
                 width: 250px;
@@ -821,16 +921,52 @@ h4 {
     color: white;
     padding-bottom: 25px;
 
+    @media screen and (max-width:425px) {
+        margin: 20px 0px;
+     }
+     @media screen and (426px <=width<=1024px) {
+        margin: 20px 0px;
+    }
+
     &-top {
         display: flex;
         flex-direction: row;
         gap: 20px;
         padding: 50px;
 
+    @media screen and (max-width:425px) {
+       overflow:hidden;
+       padding: 20px 20px 20px 40px;
+    }
+
+    @media screen and (426px <=width<=1024px) {
+        overflow:hidden
+    }
+        
+
         &-text {
             font-size: 40px;
             text-transform: uppercase;
             font-weight: 500;
+
+            @media screen and (max-width:425px) {
+                font-size: 30px; 
+             }
+
+             @media screen and (426px <=width<=1024px) {
+                font-size: 40px; 
+            }
+        }
+
+        &-text2 {
+            font-size: 40px;
+            text-transform: uppercase;
+            font-weight: 500;
+
+            @media screen and (max-width:425px) {
+                display: none;
+             }
+
         }
     }
 }
@@ -843,6 +979,19 @@ h4 {
     margin: 50px;
     align-items: center;
 
+    @media screen and (max-width:425px) {
+        flex-direction: column;
+        align-items: flex-end;
+        overflow:hidden;
+        margin: 20px 50px;
+     }
+     @media screen and (426px <=width<=1024px) {
+        align-items: flex-end;
+        overflow:hidden;
+        margin: 20px 30px;
+     }
+
+
     &-title {
         font-size: 100px;
         font-style: normal;
@@ -850,6 +999,18 @@ h4 {
         text-transform: uppercase;
         margin: 50px 0px;
         width: 50%;
+
+        @media screen and (max-width:425px) {
+            font-size: 50px; 
+            margin: 10px 0px;
+            width: 300px;  
+         }
+
+         @media screen and (426px <=width<=1024px) {
+            font-size: 50px; 
+            margin: 10px 0px;
+            width: 300px;  
+         }
     }
 
     &-social {
@@ -864,10 +1025,33 @@ h4 {
         justify-content: space-around;
         align-items: center;
 
+        @media screen and (max-width:425px) {
+            width: 300px;
+            height: 135px;
+            flex-direction: column;
+            align-items: flex-end;
+         }
+
+         @media screen and (426px <=width<=1024px) {
+            width: 300px;
+            height: 135px;
+            flex-direction: column;
+            align-items: flex-end;
+         }
+
         &-email {
             font-size: 25px;
             width: 400px;
             height: 60px;
+
+            @media screen and (max-width:425px) {
+                width: 300px;   
+             }
+
+             @media screen and (426px <=width<=1024px) {
+                width: 300px;
+             }
+          
         }
 
         &-button {
@@ -876,6 +1060,8 @@ h4 {
             color: rgb(0, 0, 0);
             font-size: 15px;
             font-weight: 600;
+
+            
         }
     }
 }
@@ -888,10 +1074,32 @@ h4 {
     margin: 50px;
     gap: 200px;
 
+    @media screen and (max-width:425px) {
+       
+        flex-direction: column;
+        gap: 50px;
+     }
+     @media screen and (426px <=width<=1024px) {
+        flex-direction: column;
+        gap: 50px;
+     }
+  
+
     &-logo {
         display: flex;
         width: 400px;
         margin-top: -150px;
+
+        @media screen and (max-width:425px) {
+         width: 300px;
+         margin-top: 50px;  
+         }
+
+         @media screen and (426px <=width<=1024px) {
+         width: 300px;
+         margin-top: 50px;
+         }
+      
     }
 }
 
@@ -903,6 +1111,18 @@ h4 {
     gap: 450px;
     color: white;
     font-weight: 300;
+
+    @media screen and (max-width:425px) {
+        font-size: 20px; 
+        gap: 30px;
+        flex-direction: column;
+     }
+
+     @media screen and (426px <=width<=1024px) {
+        font-size: 20px; 
+        gap: 200px;
+     }
+     
 
     &-detail {
         display: flex;
@@ -926,8 +1146,18 @@ h4 {
     margin: 150px 50px 25px;
     justify-content: space-between;
 
+    @media screen and (max-width:425px) {
+        gap: 15px;
+        }
+
+
+
     &-text {
         font-size: 20px;
+
+        @media screen and (max-width:425px) {
+            font-size: 10px; 
+            }
     }
 
     &-icon {
@@ -935,5 +1165,9 @@ h4 {
         justify-content: space-between;
         align-items: center;
         gap: 15px;
+
+        @media screen and (max-width:425px) {
+            gap: 5px;
+            }
     }
 }
